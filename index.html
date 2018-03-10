@@ -1,9 +1,36 @@
-<div style="width: 50%; margin: 0 auto;">
-  <marquee>POET</marquee>
-  <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    html * {cursor:none}
+  </style>
+</head>
+<body>
+  <div style="width: 50%; margin: 0 auto;">
+    <marquee>POET</marquee>
+    <br>
+    
+    <img alt="Maryan's face" src="maryan_mug.jpg" height="400px">
+    
+    <marquee direction="right">POET</marquee>
+    <img id="mcbday" src="maryan_kid_mug.png" style="position: absolute;">
+
+  </div>
+
+  <script type="text/javascript" src="jquery-3.3.1.slim.min.js"></script>
+  <script type="text/javascript">
+    $(document).mousemove(function(e){
+      var img = $("#mcbday");
+      img.css({
+        left:e.pageX - img.width()/2,
+        top:e.pageY - img.height()/2});
+    });
+  </script>
+
   
-  <img alt="Maryan's face" src="maryan_mug.jpg" height="400px">
-  
-  <marquee direction="right">POET</marquee>
-</div>
+</body>
+</html>
+
 
